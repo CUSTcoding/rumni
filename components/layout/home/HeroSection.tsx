@@ -12,7 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function HeroSection() {
   const sectionRef = useRef(null);
-  const imagesRef = useRef([]);
+  const imagesRef = useRef<(HTMLDivElement | null)[]>([]);
 
   const {x, y} = useMousePosition();
 
@@ -189,7 +189,7 @@ export default function HeroSection() {
         {images.map((src, i) => (
           <div
             key={i}
-            ref={(el) => (imagesRef.current[i] = el)}
+            ref={(el) => { imagesRef.current[i] = el; }}
             className="absolute top-1/2 left-1/2 w-[420px] h-[320px] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-md shadow-2xl"
           >
             <Image
