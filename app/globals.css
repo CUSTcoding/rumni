@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FEFAE0;
+  --foreground: #2C2A4A;
+  --primary: #2C2A4A;
+  --accent: #D4A373;
+  --neutral: #FEFAE0;
+  --text-primary: #2C2A4A;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-accent: var(--accent);
+  --color-neutral: var(--neutral);
+  --color-text-primary: var(--text-primary);
+  --font-playfair: var(--font-playfair);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1C1B22;
+    --foreground: #EDEDED;
+    --primary: #2C2A4A;
+    --accent: #D4A373;
+    --neutral: #1C1B22;
+    --text-primary: #EDEDED;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-playfair), serif;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mask,
+.maskbody {
+  cursor: default;
+  line-height: 66px;
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  color: #2C2A4A;
+  background: #D4A373;
+
+  -webkit-mask-image: url("/assets/circle-svgrepo-com.svg");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  -webkit-mask-position: 50%;
+
+  mask-image: url("/assets/circle-svgrepo-com.svg");
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: 50%;
+}
+
+.maskbody {
+  color: #2C2A4A;
+}
+
+@media (prefers-color-scheme: dark) {
+  .maskbody {
+    color: #EDEDED;
+  }
+}
+.mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-composite: destination-in;
+
+  mask-repeat: no-repeat;
+  mask-composite: intersect;
+}
+
+.maskbody {
+  position: relative;
+  z-index: 1;
+}
+
