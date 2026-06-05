@@ -38,6 +38,8 @@ export default function ExhibitionHighlight() {
             View Exhibitions
           </Link>
 
+
+
         </div>
       </div>
     </section>

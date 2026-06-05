@@ -130,18 +130,18 @@ export default function HeroSection() {
           transition={{ type: "tween", ease: "backOut" }}
         >
             <span onMouseEnter={() => {setIsMousered(true)}} onMouseLeave={() => {setIsMousered(false)}} className="md:w-1/2 gap-4 p-10 md:p-0 flex flex-col items-start justify-center">
-              <h1 className="text-start text-2xl sm:text-3xl  md:text-5xl lg:text-6xl font-bold uppercase tracking-wider opacity-70 text-[#2C2A4A] dark:text-[#EDEDED]">
+              <h1 className="text-start text-2xl sm:text-3xl  md:text-5xl lg:text-6xl hidden md:flex font-bold uppercase tracking-wider opacity-70 text-[#2C2A4A] dark:text-[#EDEDED]">
                 Welcome to my Art Portfolio
               </h1>
               
-              <p className="w-full text-start text-lg text-[17px] sm:text-xl md:text-2xl lg:text-3xl font-semibold text-[#2C2A4A] dark:text-[#EDEDED]">I`m <span className="text-red-500">Rumni</span> and my background is  <span>Digital & Interactive Media & Web Designer</span></p>
+              <p className="w-full text-start hidden md:block text-lg text-[17px] sm:text-xl md:text-2xl lg:text-3xl font-semibold text-[#2C2A4A] dark:text-[#EDEDED]">I`m <span className="text-red-500">Rumni</span> and my background is  <span>Digital & Interactive Media </span></p>
 
-              <p className="text-start text-xs sm:text-sm md:text-base lg:text-lg font-medium opacity-70 mt-2 text-[#2C2A4A] dark:text-[#EDEDED]">
+              <p className="text-start text-xs hidden md:block sm:text-sm md:text-base lg:text-lg font-medium opacity-70 mt-2 text-[#2C2A4A] dark:text-[#EDEDED]">
                 I turn emotion into form. Memory into texture. Noise into something you can feel.
               </p>
 
 
-              <div className=" gap-4  w-full flex items-center justify-center">
+              <div className=" gap-4  w-full hidden md:flex items-center justify-center">
                 <button className="px-2 text-sm md:text-md p-5 rounded-2xl border border-[#2C2A4A]/40 dark:border-[#EDEDED]/40 text-[#2C2A4A] dark:text-[#EDEDED] hover:rounded-3xl hover:bg-[#2C2A4A] dark:hover:bg-[#EDEDED] hover:text-[#FEFAE0] dark:hover:text-[#1C1B22] transition">
                   Explore the Work
                 </button>
@@ -154,7 +154,7 @@ export default function HeroSection() {
               </span>
           </motion.div>
 
-          <motion.div className="maskbody absolute justify-center items-center w-full h-full">
+          <motion.div className="maskbody absolute  justify-center items-center w-full h-full">
 
             <span className="md:w-1/2 p-10 gap-4 md:p-0 flex flex-col items-start justify-center">
 
